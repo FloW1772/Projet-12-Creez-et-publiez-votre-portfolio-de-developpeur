@@ -19,6 +19,7 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
+      cover: <img src= {ohmyfood} alt="Logo projet 1" />,
       title: 'Projet-4-Ohmyfood',
       description: 'Description du projet 1...',
       // cover: project1Cover,
@@ -26,6 +27,7 @@ export default function Portfolio() {
     },
     {
       id: 2,
+      cover: <img src= {Print} alt="Logo projet 2" />,
       title: 'Projet-5-Print-it',
       description: 'Description du projet 2...',
       // cover: project2Cover,
@@ -33,6 +35,7 @@ export default function Portfolio() {
     },
     {
       id: 3,
+      cover: <img src= {sophie} alt="Logo projet 3" />,
       title: 'Projet-6-Sophie-Bluel',
       description: 'Description du projet 3...',
       // cover: project3Cover,
@@ -40,6 +43,7 @@ export default function Portfolio() {
     },
     {
       id: 4,
+      cover: <img src= {Kasa} alt="Logo projet 4" />,
       title: 'Projet-8-Kasa',
       description: 'Description du projet 4...',
       // cover: project4Cover,
@@ -47,6 +51,7 @@ export default function Portfolio() {
     },
     {
       id: 5,
+      cover: <img src= {nina} alt="Logo projet 5" />,
       title: 'Projet-9-Nina-Carducci',
       description: 'Description du projet 5...',
       // cover: project5Cover,
@@ -54,6 +59,7 @@ export default function Portfolio() {
     },
     {
       id: 6,
+      cover: <img src= {events} alt="Logo projet 6" />,
       title: 'Projet-10-724events',
       description: 'Description du projet 6...',
       // cover: project6Cover,
