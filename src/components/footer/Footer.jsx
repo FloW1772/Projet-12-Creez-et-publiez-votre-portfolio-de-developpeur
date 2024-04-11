@@ -1,12 +1,18 @@
-import React from 'react'
-import './footer.scss'
-import LOGOFOOTER from '../../assets/logo/LOGO-footer.png'
+import React from 'react';
+import './Footer.scss'; // Assurez-vous d'avoir le fichier CSS correspondant
 
 export default function Footer() {
   return (
-    <div className="footer">
-      <img src={LOGOFOOTER} alt="Logo Kasa" />
-      <p className="footer_name">© 2020 Kasa. All rights reserved</p>
-    </div>
-  )
+    <footer className="footer">
+      <div className="footer-content">
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+        <div className="social-icons">
+          <a href="#"><i className="fab fa-facebook"></i></a>
+          <a href="#"><i className="fab fa-twitter"></i></a>
+          <a href="#"><i className="fab fa-linkedin"></i></a>
+          <a href="#"><i className="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  );
 }

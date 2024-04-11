@@ -1,37 +1,17 @@
-import React from 'react'
-import './header.scss'
-import Logo from '../../assets/logo/LOGO.png'
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import './Header.scss'; // Assurez-vous d'avoir le fichier CSS correspondant
 
 export default function Header() {
   return (
     <header className="header">
-      <img className="logo" src={Logo} alt="logo-kasa" />
-      <nav>
-        <ul>
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "active" : ""
-              }
-            >
-              Accueil
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/a-propos"
-              className={({ isActive }) =>
-                isActive ? "active" : ""
-              }
-            >
-              A-propos
-            </NavLink>
-          </li>
+      <nav className="navbar">
+        <div className="logo">Mon Portfolio</div>
+        <ul className="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-
-  )
+  );
 }

@@ -1,37 +1,54 @@
-// home.js
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import Card from '../components/card/Card';
-import './home.scss';
-import Banner from '../components/banner/Banner';
-import bannerhome from '../assets/images/Picture1.png'
+import ProjectCard from '../components/ProjectCard/ProjectCard';
+// import './portfolio.scss';
+// import project1Cover from '../assets/images/project1.png';
+// import project2Cover from '../assets/images/project2.png';
+// import project3Cover from '../assets/images/project3.png';
 
-export default function Home() {
-  const [logements, setLogements] = useState([]);
-
-  useEffect(() => {
-    fetch("/data.json")
-      .then((datas) => {
-        return datas.json();
-      })
-      .then((jsondata) => {
-        setLogements(jsondata);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+export default function Portfolio() {
+  const projects = [
+    {
+      id: 1,
+      title: 'Projet 1',
+      description: 'Description du projet 1...',
+      // cover: project1Cover,
+      link: '#',
+    },
+    {
+      id: 2,
+      title: 'Projet 2',
+      description: 'Description du projet 2...',
+      // cover: project2Cover,
+      link: '#',
+    },
+    {
+      id: 3,
+      title: 'Projet 3',
+      description: 'Description du projet 3...',
+      // cover: project3Cover,
+      link: '#',
+    },
+  ];
 
   return (
     <div>
       <Header />
-      <Banner image={bannerhome} title='Chez vous, partout et ailleurs' />
-      <div className="logement-cards">
-        {logements?.map((logement) => (
-          <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
+      <h1 className="portfolio-title">Portfolio</h1>
+      <div className="project-cards">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            cover={project.cover}
+            link={project.link}
+          />
         ))}
       </div>
       <Footer />
     </div>
   );
 }
-
