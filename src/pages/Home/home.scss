@@ -1,40 +1,69 @@
-.section {
+// home.scss
+
+/* Style de la bannière */
+.banner {
+  width: 100%;
+  height: 300px;
+  background-color: #f0f0f0;
+  background-image: url('../assets/images/banner.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
 }
 
+/* Style de la grille de cartes de logements */
 .logement-cards {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 65px;
-  margin-right: 65px;
-  justify-content: space-evenly;
-  background-color: #F6F6F6;
-  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
+/* Style de chaque carte de logement */
+.logement-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
-
-
-@media (max-width: 576px) {
-
-  .logement-cards {
-    padding-left: 20px;
-    padding-right: 20px;
-
-
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
   }
 
-}
+  .card-content {
+    padding: 20px;
 
-@media (max-width: 990px) {
-  .logement-cards {
-    margin-left: 40px;
-    margin-right: 40px;
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
 
+    p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .read-more {
+      display: inline-block;
+      color: #007bff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-
 }
