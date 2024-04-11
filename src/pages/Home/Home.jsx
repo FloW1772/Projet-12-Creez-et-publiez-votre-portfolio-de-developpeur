@@ -10,7 +10,6 @@ import ohmyfood from '../../assets/logo/ohmyfood.png'
 import Print from '../../assets/logo/Print-it.png'
 import sophie from '../../assets/logo/sophie-bluel.png'
 
-// import './portfolio.scss';
 // import project1Cover from '../assets/images/project1.png';
 // import project2Cover from '../assets/images/project2.png';
 // import project3Cover from '../assets/images/project3.png';
