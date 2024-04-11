@@ -31,7 +31,30 @@ export default function Portfolio() {
       // cover: project3Cover,
       link: '#',
     },
+    {
+      id: 4,
+      title: 'Projet 4',
+      description: 'Description du projet 4...',
+      // cover: project4Cover,
+      link: '#',
+    },
+    {
+      id: 5,
+      title: 'Projet 5',
+      description: 'Description du projet 5...',
+      // cover: project5Cover,
+      link: '#',
+    },
+    {
+      id: 3,
+      title: 'Projet 6',
+      description: 'Description du projet 6...',
+      // cover: project6Cover,
+      link: '#',
+    },
   ];
+  // const firstRow = projects.slice(0, 3); // Les 3 premiers projets
+  // const secondRow = projects.slice(3); // Les 3 derniers projets
 
   return (
     <div>

@@ -19,21 +19,23 @@
   }
 }
 
-/* Style de la grille de cartes de logements */
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes de largeur égale */
   gap: 20px;
   padding: 20px;
 }
-
-/* Style de chaque carte de logement */
+.project-cards:nth-child(3) {
+  grid-column: span 3;
+}
 .project-card {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin-top: 50px;
 
+  
   img {
     width: 100%;
     height: 200px;
