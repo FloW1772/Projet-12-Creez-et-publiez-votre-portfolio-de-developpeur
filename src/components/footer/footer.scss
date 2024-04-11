@@ -1,0 +1,26 @@
+.footer {
+  background-color: black;
+  padding-bottom: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 2%;
+}
+
+.footer_name {
+  font-size: 24px;
+  color: white;
+
+}
+
+@media (max-width: 576px) {
+  .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer_name {
+    font-size: 16px;
+  }
+}

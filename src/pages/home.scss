@@ -1,0 +1,40 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logement-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 65px;
+  margin-right: 65px;
+  justify-content: space-evenly;
+  background-color: #F6F6F6;
+  border-radius: 30px;
+}
+
+
+
+
+@media (max-width: 576px) {
+
+  .logement-cards {
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+  }
+
+}
+
+@media (max-width: 990px) {
+  .logement-cards {
+    margin-left: 40px;
+    margin-right: 40px;
+
+  }
+
+}
