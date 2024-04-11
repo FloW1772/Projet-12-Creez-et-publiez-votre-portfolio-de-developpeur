@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
-import ProjectCard from '../components/ProjectCard/ProjectCard';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
 // import './portfolio.scss';
 // import project1Cover from '../assets/images/project1.png';
 // import project2Cover from '../assets/images/project2.png';
