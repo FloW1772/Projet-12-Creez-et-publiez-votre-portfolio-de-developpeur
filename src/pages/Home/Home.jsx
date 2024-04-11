@@ -3,6 +3,13 @@ import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import './home.scss';
+import events from '../../assets/logo/events.png'
+import Kasa from '../../assets/logo/Kasa.png'
+import nina from '../../assets/logo/nina.webp'
+import ohmyfood from '../../assets/logo/ohmyfood.png'
+import Print from '../../assets/logo/Print-it.png'
+import sophie from '../../assets/logo/sophie-bluel.png'
+
 // import './portfolio.scss';
 // import project1Cover from '../assets/images/project1.png';
 // import project2Cover from '../assets/images/project2.png';
