@@ -9,6 +9,7 @@ import nina from '../../assets/logo/nina.webp'
 import ohmyfood from '../../assets/logo/ohmyfood.png'
 import Print from '../../assets/logo/Print-it.png'
 import sophie from '../../assets/logo/sophie-bluel.png'
+// import GitHubPage from '../../components/GitHubPage/GitHubPage';
 
 // import project1Cover from '../assets/images/project1.png';
 // import project2Cover from '../assets/images/project2.png';
@@ -88,3 +89,16 @@ export default function Portfolio() {
     </div>
   );
 }
+// return (
+//   <div>
+//     {projects.map(project => (
+//       <div key={project.id}>
+//         {project.cover}
+//         <GitHubPage key={project.id} url={project.link} />
+//         <h2>{project.title}</h2>
+//         <p>{project.description}</p>
+//       </div>
+//     ))}
+//   </div>
+// );
+// }
