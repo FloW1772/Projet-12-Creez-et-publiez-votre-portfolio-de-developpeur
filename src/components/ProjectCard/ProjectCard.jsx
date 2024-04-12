@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProjectCard.scss'; // Assurez-vous d'avoir le fichier CSS correspondant
+import './ProjectCard.scss';
 
 export default function ProjectCard({ id, title, description, cover, link }) {
   return (
