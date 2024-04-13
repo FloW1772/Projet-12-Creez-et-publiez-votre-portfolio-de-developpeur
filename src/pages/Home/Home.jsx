@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import Presentation from '../../components/presentation/presentation'
 import './home.scss';
 import events from '../../assets/logo/events.png';
 import Kasa from '../../assets/logo/Kasa.png';
@@ -59,6 +60,7 @@ export default function Portfolio() {
   return (
     <div>
       <Header />
+      <Presentation />
       <h1 className="portfolio-title">Portfolio</h1>
       <div className="project-cards">
         {projects.map((project) => (
