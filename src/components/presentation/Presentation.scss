@@ -21,15 +21,15 @@
 
   .button {
     display: inline-block;
-    background-color: #007bff; // couleur du fond du bouton
-    color: #fff; // couleur du texte du bouton
+    background-color: #007bff;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #0056b3; // couleur du fond du bouton au survol
+      background-color: #0056b3;
     }
   }
 }
