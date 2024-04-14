@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="navbar">
-        <div className="logo">Mon Portfolio</div>
+        <div className="logo">Florentin Guiné</div>
         <ul className="nav-links">
           <li><a href="/">Accueil</a></li>
           <li><a href="/portfolio">Portfolio</a></li>

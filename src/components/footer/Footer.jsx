@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+        <p>&copy; 2024 Florentin Guiné. Tous droits réservés.</p>
         <div className="social-icons">
           <a href="#"><i className="fab fa-facebook"></i></a>
           <a href="#"><i className="fab fa-twitter"></i></a>
