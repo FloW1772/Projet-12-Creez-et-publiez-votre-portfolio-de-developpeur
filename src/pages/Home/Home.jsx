@@ -61,19 +61,7 @@ export default function Portfolio() {
     <div>
       <Header />
       <Presentation />
-      <h1 className="portfolio-title">Portfolio</h1>
-      <div className="project-cards">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            cover={project.cover}
-            link={project.link}
-          />
-        ))}
-      </div>
+      
       <Footer />
     </div>
   );
