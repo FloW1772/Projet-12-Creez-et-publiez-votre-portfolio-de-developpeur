@@ -3,7 +3,6 @@ import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import Presentation from '../../components/presentation/presentation'
-import './home.scss';
 import events from '../../assets/logo/events.png';
 import Kasa from '../../assets/logo/Kasa.png';
 import nina from '../../assets/logo/nina.webp';
