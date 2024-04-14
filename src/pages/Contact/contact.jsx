@@ -4,6 +4,7 @@ import './contact.scss';
 const ContactPage = () => {
   return (
     <div className="contact-page">
+      
       <h1>Contactez-moi</h1>
       <form>
         <label htmlFor="name">Nom :</label>
