@@ -7,10 +7,8 @@ export default function Footer() {
       <div className="footer-content">
         <p>&copy; 2024 Florentin Guiné. Tous droits réservés.</p>
         <div className="social-icons">
-          <a href="#"><i className="fab fa-facebook"></i></a>
-          <a href="#"><i className="fab fa-twitter"></i></a>
-          <a href="#"><i className="fab fa-linkedin"></i></a>
-          <a href="#"><i className="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/florentin-guin%C3%A9-5165931a1/" target="_blank"><i className="fab fa-linkedin"></i></a>
+          <a href="https://github.com/FloW1772" target="_blank"><i className="fab fa-github"></i></a>
         </div>
       </div>
     </footer>
