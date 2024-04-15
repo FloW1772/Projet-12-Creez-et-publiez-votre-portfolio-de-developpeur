@@ -1,149 +1,94 @@
-// import React, { useState } from 'react';
-// import './modale.scss';
-
-// export default function Modal({ closeModal, addProject }) {
-//   const [newProject, setNewProject] = useState({
-//     cover: '',
-//     title: '',
-//     description: '',
-//     link: '',
-//   });
-
-//   // Fonction pour gérer les changements dans les champs du formulaire
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setNewProject({ ...newProject, [name]: value });
-//   };
-
-//   // Fonction pour gérer le changement de fichier
-//   const handleFileChange = (e) => {
-//     const file = e.target.files[0];
-//     setNewProject({ ...newProject, cover: file });
-//   };
-
-//   // Fonction pour soumettre le formulaire
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     // Vérification que tous les champs sont remplis
-//     if (newProject.cover && newProject.title && newProject.description && newProject.link) {
-//       // Vérification que le lien commence par "https://github.com"
-//       const githubRegex = /^https:\/\/github\.com/;
-//       if (!githubRegex.test(newProject.link)) {
-//         alert("Le lien doit commencer par https://github.com");
-//         return; // Arrêter le traitement si le lien n'est pas valide
-//       }
-//       // Appel de la fonction addProject pour ajouter le nouveau projet
-//       addProject(newProject);
-//       // Réinitialisation du formulaire et fermeture de la modale
-//       setNewProject({ cover: '', title: '', description: '', link: '' });
-//       closeModal();
-//     } else {
-//       alert('Veuillez remplir tous les champs.');
-//     }
-//   };
-
-//   return (
-//     <div className="modal-overlay">
-//       <div className="modal-content">
-//         <span className="close-modal" onClick={closeModal}>X</span>
-//         <h2>Ajouter un nouveau projet</h2>
-//         <form onSubmit={handleSubmit}>
-//           <div className="form-group">
-//             <label htmlFor="cover">Image du projet:</label>
-//             <input type="file" id="cover" name="cover" onChange={handleFileChange} />
-//           </div>
-//           <div className="form-group">
-//             <label htmlFor="title">Titre:</label>
-//             <input type="text" id="title" name="title" value={newProject.title} onChange={handleChange} />
-//           </div>
-//           <div className="form-group">
-//             <label htmlFor="description">Description:</label>
-//             <textarea id="description" name="description" value={newProject.description} onChange={handleChange}></textarea>
-//           </div>
-//           <div className="form-group">
-//             <label htmlFor="link">Lien GitHub:</label>
-//             <input type="text" id="link" name="link" value={newProject.link} onChange={handleChange} />
-//           </div>
-//           <button type="submit">Ajouter</button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// }
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './modale.scss';
 
-export default function Modal({ closeModal, addProject }) {
-  const [newProject, setNewProject] = useState({
-    cover: '',
-    title: '',
-    description: '',
-    link: '',
-  });
+function AdminPanel() {
+  const [projects, setProjects] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [showAddProject, setShowAddProject] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  // Fonction pour gérer les changements dans les champs du formulaire
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewProject({ ...newProject, [name]: value });
-  };
+  useEffect(() => {
+    // Assurez-vous de récupérer les projets lors du montage du composant
+    fetchProjects();
+  }, []);
 
-  // Fonction pour gérer le changement de fichier
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setNewProject({ ...newProject, cover: file });
-  };
-
-  // Fonction pour soumettre le formulaire
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Vérification que tous les champs sont remplis
-    if (newProject.cover && newProject.title && newProject.description && newProject.link) {
-      // Vérification que le lien commence par "https://github.com"
-      const githubRegex = /^https:\/\/github\.com/;
-      if (!githubRegex.test(newProject.link)) {
-        alert("Le lien doit commencer par https://github.com");
-        return; // Arrêter le traitement si le lien n'est pas valide
-      }
-      // Vérification que le fichier sélectionné est une image
-      if (!newProject.cover.type.startsWith('image/')) {
-        alert("Veuillez sélectionner un fichier image.");
-        return; // Arrêter le traitement si le fichier n'est pas une image
-      }
-      // Appel de la fonction addProject pour ajouter le nouveau projet
-      addProject(newProject);
-      // Réinitialisation du formulaire et fermeture de la modale
-      setNewProject({ cover: '', title: '', description: '', link: '' });
-      closeModal();
-    } else {
-      alert('Veuillez remplir tous les champs.');
+  const fetchProjects = async () => {
+    // Logique pour récupérer les projets depuis votre API
+    try {
+      const response = await fetch('http://localhost:5678/api/works');
+      const data = await response.json();
+      setProjects(data);
+    } catch (error) {
+      console.error('Error fetching projects:', error);
     }
   };
 
+  const deleteProject = async (id) => {
+    // Logique pour supprimer un projet
+    try {
+      const token = localStorage.getItem('token');
+      await fetch(`http://localhost:5678/api/works/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+          'accept': '*/*',
+          'authorization': `Bearer ${token}`,
+        },
+      });
+      // Rafraîchir la liste des projets après la suppression
+      fetchProjects();
+    } catch (error) {
+      console.error('Error deleting project:', error);
+    }
+  };
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedProject(null);
+  };
+
+  const toggleAddProject = () => {
+    setShowAddProject(!showAddProject);
+  };
+
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <span className="close-modal" onClick={closeModal}>X</span>
-        <h2>Ajouter un nouveau projet</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="cover">Image du projet:</label>
-            <input type="file" id="cover" name="cover" onChange={handleFileChange} />
+    <div className="admin-panel">
+      <div className="project-gallery">
+        {projects.map((project) => (
+          <div key={project.id} className="project-item">
+            <img src={project.imageUrl} alt={project.title} />
+            <p>{project.title}</p>
+            <button onClick={() => openModal(project)}>Edit</button>
+            <button onClick={() => deleteProject(project.id)}>Delete</button>
           </div>
-          <div className="form-group">
-            <label htmlFor="title">Titre:</label>
-            <input type="text" id="title" name="title" value={newProject.title} onChange={handleChange} />
-          </div>
-          <div className="form-group">
-            <label htmlFor="description">Description:</label>
-            <textarea id="description" name="description" value={newProject.description} onChange={handleChange}></textarea>
-          </div>
-          <div className="form-group">
-            <label htmlFor="link">Lien GitHub:</label>
-            <input type="text" id="link" name="link" value={newProject.link} onChange={handleChange} />
-          </div>
-          <button type="submit">Ajouter</button>
-        </form>
+        ))}
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
+            {/* Content for editing project goes here */}
+          </div>
+        </div>
+      )}
+
+      {/* Add Project Form */}
+      {showAddProject && (
+        <div className="add-project-form">
+          {/* Form for adding a new project goes here */}
+        </div>
+      )}
+
+      <button onClick={toggleAddProject}>Add Project</button>
     </div>
   );
 }
+
+export default AdminPanel;
