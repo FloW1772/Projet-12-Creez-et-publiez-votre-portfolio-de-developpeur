@@ -15,20 +15,32 @@ export default function Modal({ closeModal, addProject }) {
     setNewProject({ ...newProject, [name]: value });
   };
 
-  // Fonction pour soumettre le formulaire
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Vérification que tous les champs sont remplis
-    if (newProject.cover && newProject.title && newProject.description && newProject.link) {
-      // Appel de la fonction addProject pour ajouter le nouveau projet
-      addProject(newProject);
-      // Réinitialisation du formulaire et fermeture de la modale
-      setNewProject({ cover: '', title: '', description: '', link: '' });
-      closeModal();
-    } else {
-      alert('Veuillez remplir tous les champs.');
-    }
+  // Fonction pour gérer le changement de fichier
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setNewProject({ ...newProject, cover: file });
   };
+
+  // Fonction pour soumettre le formulaire
+const handleSubmit = (e) => {
+  e.preventDefault();
+  // Vérification que tous les champs sont remplis
+  if (newProject.cover && newProject.title && newProject.description && newProject.link) {
+    // Vérification que le lien commence par "https://github.com"
+    const githubRegex = /^https:\/\/github\.com/;
+    if (!githubRegex.test(newProject.link)) {
+      alert("Lien faux");
+      return; // Arrêter le traitement si le lien n'est pas valide
+    }
+    // Appel de la fonction addProject pour ajouter le nouveau projet
+    addProject(newProject);
+    // Réinitialisation du formulaire et fermeture de la modale
+    setNewProject({ cover: '', title: '', description: '', link: '' });
+    closeModal();
+  } else {
+    alert('Veuillez remplir tous les champs.');
+  }
+};
 
   return (
     <div className="modal-overlay">
@@ -38,7 +50,7 @@ export default function Modal({ closeModal, addProject }) {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="cover">Image du projet:</label>
-            <input type="text" id="cover" name="cover" value={newProject.cover} onChange={handleChange} />
+            <input type="file" id="cover" name="cover" onChange={handleFileChange} />
           </div>
           <div className="form-group">
             <label htmlFor="title">Titre:</label>
