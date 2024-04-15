@@ -92,7 +92,6 @@ import Print from '../../assets/logo/Print-it.png';
 import sophie from '../../assets/logo/sophie-bluel.png';
 
 export default function Portfolio() {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -100,7 +99,6 @@ export default function Portfolio() {
   };
 
   const addProject = (newProject) => {
-    // Logique pour ajouter le nouveau projet
     console.log('Nouveau projet ajouté:', newProject);
   };
 

@@ -151,7 +151,7 @@
 import React, { useState } from 'react';
 import './modale.scss';
 
-export default function Modal({ closeModal, addProject }) {
+export default function Modal({ onClose, addProject }) {
   const [newProject, setNewProject] = useState({
     cover: '',
     title: '',
@@ -159,39 +159,31 @@ export default function Modal({ closeModal, addProject }) {
     link: '',
   });
 
-  // Fonction pour gérer les changements dans les champs du formulaire
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNewProject({ ...newProject, [name]: value });
   };
 
-  // Fonction pour gérer le changement de fichier
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setNewProject({ ...newProject, cover: file });
   };
 
-  // Fonction pour soumettre le formulaire
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Vérification que tous les champs sont remplis
     if (newProject.cover && newProject.title && newProject.description && newProject.link) {
-      // Vérification que le lien commence par "https://github.com"
       const githubRegex = /^https:\/\/github\.com/;
       if (!githubRegex.test(newProject.link)) {
         alert("Le lien doit commencer par https://github.com");
-        return; // Arrêter le traitement si le lien n'est pas valide
+        return;
       }
-      // Vérification que le fichier sélectionné est une image
       if (!newProject.cover.type.startsWith('image/')) {
         alert("Veuillez sélectionner un fichier image.");
-        return; // Arrêter le traitement si le fichier n'est pas une image
+        return;
       }
-      // Appel de la fonction addProject pour ajouter le nouveau projet
-      addProject(newProject); // Utiliser addProject ici
-      // Réinitialisation du formulaire et fermeture de la modale
+      addProject(newProject);
       setNewProject({ cover: '', title: '', description: '', link: '' });
-      closeModal();
+      onClose(); // Utilise onClose ici
     } else {
       alert('Veuillez remplir tous les champs.');
     }
@@ -200,7 +192,7 @@ export default function Modal({ closeModal, addProject }) {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <span className="close-modal" onClick={closeModal}>X</span>
+        <span className="close-modal" onClick={onClose}>X</span>
         <h2>Ajouter un nouveau projet</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
