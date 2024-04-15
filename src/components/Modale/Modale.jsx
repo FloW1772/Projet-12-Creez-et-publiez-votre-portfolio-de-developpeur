@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './modale.scss'; // Assurez-vous d'avoir un fichier CSS pour styliser votre modal
+import './modale.scss';
 
 export default function Modal({ closeModal, addProject }) {
   const [newProject, setNewProject] = useState({

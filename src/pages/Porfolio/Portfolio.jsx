@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import Modale from '../../components/Modale/Modale'
 import events from '../../assets/logo/events.png';
 import Kasa from '../../assets/logo/Kasa.png';
 import nina from '../../assets/logo/nina.webp';
@@ -8,6 +9,12 @@ import Print from '../../assets/logo/Print-it.png';
 import sophie from '../../assets/logo/sophie-bluel.png';
 
 export default function Portfolio() {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
   const projects = [
     {
       id: 1,
@@ -53,21 +60,41 @@ export default function Portfolio() {
     },
   ];
 
-  return (
-    <div>
-      <h1 className="portfolio-title">Portfolio</h1>
-      <div className="project-cards">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            cover={project.cover}
-            link={project.link}
-          />
-        ))}
-      </div>
+//   return (
+//     <div>
+//       <h1 className="portfolio-title">Portfolio</h1>
+//       <div className="project-cards">
+//         {projects.map((project) => (
+//           <ProjectCard
+//             key={project.id}
+//             id={project.id}
+//             title={project.title}
+//             description={project.description}
+//             cover={project.cover}
+//             link={project.link}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+return (
+  <div>
+    <h1 className="portfolio-title">Portfolio</h1>
+    <div className="project-cards">
+      {projects.map((project) => (
+        <ProjectCard
+          key={project.id}
+          id={project.id}
+          title={project.title}
+          description={project.description}
+          cover={project.cover}
+          link={project.link}
+        />
+      ))}
     </div>
-  );
+    <button onClick={toggleModal}>Ajouter un nouveau projet</button>
+    {isModalOpen && <Modale onClose={toggleModal} />} {/* Affiche la modal si isModalOpen est vrai */}
+  </div>
+);
 }
