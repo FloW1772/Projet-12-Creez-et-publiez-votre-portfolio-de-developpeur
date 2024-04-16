@@ -71,11 +71,10 @@
 //   );
 // };
 
-// export default ContactPage;
 import React, { useState, useRef } from 'react';
-import Modal from '../../components/Modale/Modale'; // Importez le composant de modale
+import Modal from '../../components/Modale/Modale'; // Importer le composant de modale
 import './contact.scss';
-import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf'
+import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -154,7 +153,7 @@ const ContactPage = () => {
         {messageSent && <p>Message envoyé</p>}
 
         {/* Bouton pour ouvrir la modale */}
-        <button onClick={openModal}>Voir PDF</button>
+        <button type="button" onClick={openModal}>CV</button>
 
         {/* Modale pour afficher le PDF */}
         {showModal && (
