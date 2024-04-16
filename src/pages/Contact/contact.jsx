@@ -75,6 +75,7 @@
 import React, { useState, useRef } from 'react';
 import Modal from '../../components/Modale/Modale'; // Importez le composant de modale
 import './contact.scss';
+import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf'
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -160,7 +161,7 @@ const ContactPage = () => {
           <Modal>
             <div>
               {/* Insérez le composant ou l'élément pour afficher le PDF */}
-              <embed src="path_to_your_pdf_file.pdf" type="application/pdf" width="100%" height="600px" />
+              <embed src={CV} type="application/pdf" width="100%" height="600px" />
             </div>
             <button onClick={closeModal}>Fermer</button> {/* Bouton pour fermer la modale */}
           </Modal>
