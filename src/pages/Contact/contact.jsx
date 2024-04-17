@@ -111,15 +111,17 @@ const ContactPage = () => {
   };
 
   const openModale = () => {
-    setShowModale(true);
-    console.log("Modale ouverte depuis la page");
-
+    if (modalRef.current) {
+      modalRef.current.openModale();
+      setShowModale(true);
+    }
   };
 
   const closeModale = () => {
-    setShowModale(false);
-    console.log("Modale fermée depuis la page");
-
+    if (modalRef.current) {
+      modalRef.current.closeModale();
+      setShowModale(false);
+    }
   };
 
   return (
@@ -160,15 +162,13 @@ const ContactPage = () => {
         <button type="button" onClick={openModale}>CV</button>
 
         {/* Modale pour afficher le PDF */}
-        {showModale && (
-          <Modale ref={modalRef}>
-            <div>
-              {/* Insérez le composant ou l'élément pour afficher le PDF */}
-              <embed src={CV} type="application/pdf" width="100%" height="600px" />
-            </div>
-            <button onClick={() => {modalRef.current.closeModale();}}>Fermer</button> {/* Bouton pour fermer la modale */}
+        <Modale ref={modalRef}>
+          <div>
+            {/* Insérez le composant ou l'élément pour afficher le PDF */}
+            <embed src={CV} type="application/pdf" width="100%" height="600px" />
+          </div>
+          <button type="button" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
           </Modale>
-        )}
       </form>
     </div>
   );
