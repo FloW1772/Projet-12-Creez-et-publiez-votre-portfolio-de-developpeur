@@ -67,37 +67,38 @@
 //     </div>
 //   );
 // }
+// Modale.jsx
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import './modale.scss';
 
-const Modal = forwardRef((props, ref) => {
+const Modale = forwardRef((props, ref) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [modalContent, setModalContent] = useState(null);
+  const [modaleContent, setModaleContent] = useState(null);
 
-  // Fonction pour ouvrir la modale avec le contenu spécifié
-  const openModal = (content) => {
-    setModalContent(content);
+  const openModale = (content) => {
+    setModaleContent(content);
     setIsOpen(true);
+    console.log("Modale ouverte");
   };
 
-  // Fonction pour fermer la modale
-  const closeModal = () => {
+  const closeModale = () => {
     setIsOpen(false);
+    console.log("Modale fermée");
   };
 
-  // Expose la fonction openModal à l'extérieur du composant
   useImperativeHandle(ref, () => ({
-    openModal
+    openModale,
+    closeModale
   }));
 
   return (
-    <div className={`modal ${isOpen ? 'open' : ''}`}>
-      <div className="modal-content">
-        <span className="close" onClick={closeModal}>&times;</span>
-        {modalContent}
+    <div className={`modale ${isOpen ? 'open' : ''}`}>
+      <div className="modale-content">
+        <span className="close" onClick={closeModale}>&times;</span>
+        {modaleContent}
       </div>
     </div>
   );
 });
 
-export default Modal;
+export default Modale;

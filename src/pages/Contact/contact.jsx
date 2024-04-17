@@ -72,7 +72,7 @@
 // };
 
 import React, { useState, useRef } from 'react';
-import Modal from '../../components/Modale/Modale'; // Importer le composant de modale
+import Modale from '../../components/Modale/Modale'; // Importer le composant de modale
 import './contact.scss';
 import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf';
 
@@ -83,7 +83,7 @@ const ContactPage = () => {
     message: ''
   });
   const [messageSent, setMessageSent] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [showModale, setShowModale] = useState(false);
   const modalRef = useRef(null); // Référence pour accéder au composant de modale
 
   const handleChange = (e) => {
@@ -110,12 +110,16 @@ const ContactPage = () => {
     // Vous devrez remplacer cette console.log par la logique réelle d'envoi de courrier électronique
   };
 
-  const openModal = () => {
-    setShowModal(true);
+  const openModale = () => {
+    setShowModale(true);
+    console.log("Modale ouverte depuis la page");
+
   };
 
-  const closeModal = () => {
-    setShowModal(false);
+  const closeModale = () => {
+    setShowModale(false);
+    console.log("Modale fermée depuis la page");
+
   };
 
   return (
@@ -153,17 +157,17 @@ const ContactPage = () => {
         {messageSent && <p>Message envoyé</p>}
 
         {/* Bouton pour ouvrir la modale */}
-        <button type="button" onClick={openModal}>CV</button>
+        <button type="button" onClick={openModale}>CV</button>
 
         {/* Modale pour afficher le PDF */}
-        {showModal && (
-          <Modal>
+        {showModale && (
+          <Modale>
             <div>
               {/* Insérez le composant ou l'élément pour afficher le PDF */}
               <embed src={CV} type="application/pdf" width="100%" height="600px" />
             </div>
-            <button onClick={closeModal}>Fermer</button> {/* Bouton pour fermer la modale */}
-          </Modal>
+            <button onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
+          </Modale>
         )}
       </form>
     </div>
