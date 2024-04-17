@@ -75,15 +75,13 @@ const Modale = forwardRef((props, ref) => {
   const [isOpen, setIsOpen] = useState(false);
   const [modaleContent, setModaleContent] = useState(null);
 
-  const openModale = (content) => {
-    setModaleContent(content);
+  const openModale = () => {
+    setModaleContent(<div>{props.children}</div>);
     setIsOpen(true);
-    console.log("Modale ouverte");
   };
 
   const closeModale = () => {
     setIsOpen(false);
-    console.log("Modale fermée");
   };
 
   useImperativeHandle(ref, () => ({
