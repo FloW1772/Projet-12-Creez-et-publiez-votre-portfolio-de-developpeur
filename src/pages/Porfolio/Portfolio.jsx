@@ -158,7 +158,11 @@ export default function Portfolio() {
   ];
 
   const handleButtonClick = (link) => {
-    window.open(link, '_blank');
+    if (link.startsWith('http://') || link.startsWith('https://')) {
+      window.open(link, '_blank');
+    } else {
+      console.error('Lien invalide:', link);
+    }
   };
 
   return (
