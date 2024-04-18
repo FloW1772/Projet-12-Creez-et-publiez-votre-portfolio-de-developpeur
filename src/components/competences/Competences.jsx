@@ -5,11 +5,13 @@ const Competences = ({ competences }) => {
   return (
     <div className="competences">
       <h2>Compétences</h2>
-      <ul>
+      <div className="cards-container">
         {competences.map((competence, index) => (
-          <li key={index}>{competence}</li>
+          <div className="card" key={index}>
+            <p>{competence}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

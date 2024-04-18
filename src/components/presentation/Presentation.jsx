@@ -27,7 +27,7 @@ const Presentation = () => {
       <img src={Logo} alt="Florentin Guiné - Logo" className="project-cover" />
       <h1>Salut, Je suis Florentin Guiné</h1>
       <p>Développeur Front-End</p>
-      <a href="/contact" className="button">Contacter</a>
+      <a href="/contact" className="button">Contacter-moi</a>
       {/* Bouton pour ouvrir la modale */}
       <button type="button" onClick={openModale}>Voir CV</button>
 
