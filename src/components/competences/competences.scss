@@ -1,0 +1,23 @@
+.competences {
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
