@@ -1,15 +1,20 @@
 import React from 'react';
-import './ProjectCard.scss';
 
-export default function ProjectCard({ id, title, description, cover, link }) {
+const ProjectCard = ({ id, cover, title, description, link }) => {
   return (
     <div className="project-card">
       <img src={cover} alt={title} className="project-cover" />
-      <div className="project-info">
+      <div className="project-details">
         <h2 className="project-title">{title}</h2>
         <p className="project-description">{description}</p>
-        <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">Voir le projet sur GitHub</a>
+        <div className="project-link">
+          <button onClick={() => window.open(link, '_blank')} className="btn">
+            Voir le projet
+          </button>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCard;
