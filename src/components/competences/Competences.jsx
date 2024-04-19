@@ -6,7 +6,7 @@ import CSS from '../../assets/icones/logo_dvl/CSS.webp'
 import Figma from '../../assets/icones/logo_dvl/Figma.webp'
 import Html from '../../assets/icones/logo_dvl/Html.webp'
 import JS from '../../assets/icones/logo_dvl/Javascript.webp'
-import Node from '../../assets/icones/logo_dvl/Node.webp'
+import JSno from '../../assets/icones/logo_dvl/node_new.webp'
 import ReactDT from '../../assets/icones/logo_dvl/React-Developer-Tools.webp'
 import RR from '../../assets/icones/logo_dvl/react-router.webp'
 import react from '../../assets/icones/logo_dvl/React.webp'
@@ -14,7 +14,7 @@ import Redux from '../../assets/icones/logo_dvl/Redux.webp'
 import Sass from '../../assets/icones/logo_dvl/Sass.webp'
 import Swagger from '../../assets/icones/logo_dvl/swagger-banner.webp'
 import VsCode from '../../assets/icones/logo_dvl/VsCode.webp'
-import Vue from '../../assets/icones/logo_dvl/Vue.js.webp'
+import Vue from '../../assets/icones/logo_dvl/Vuejs_logo.jpeg'
 import Yarn from '../../assets/icones/logo_dvl/Yarn.webp'
 
 
@@ -27,7 +27,7 @@ const competenceImages = {
   JavaScript: JS,
   React: react,
   Sass: Sass,
-  Node: Node,
+  Node: JSno,
   'Visual Studio Code': VsCode,
   Vuejs: Vue,
   Figma: Figma,
