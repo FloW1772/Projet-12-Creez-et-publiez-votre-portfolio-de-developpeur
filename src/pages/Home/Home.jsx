@@ -1,6 +1,6 @@
 import React from 'react';
 import Presentation from '../../components/presentation/presentation';
-import Competences from '../../components/competences/Competences'; // Importer le composant Competences
+import Competences from '../../components/competences/Competences';
 import './home.scss';
 
 export default function Home() {

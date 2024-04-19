@@ -2,6 +2,7 @@
   text-align: center;
   padding: 20px;
 
+
   img {
     max-width: 200px;
     margin: 20px;
@@ -9,9 +10,20 @@
     height: auto;
   }
 
+  .mode {
+    color: black;
+  }
+
+  h2 {
+    color: black;
+    text-decoration: underline;
+
+  }
+
   h1 {
     font-size: 24px;
     margin-bottom: 10px;
+
   }
 
   p {
@@ -32,6 +44,7 @@
 
     &:hover {
       background-color: #0056b3;
+
     }
   }
 }
