@@ -8,12 +8,10 @@ function AdminPanel() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
-    // Assurez-vous de récupérer les projets lors du montage du composant
     fetchProjects();
   }, []);
 
   const fetchProjects = async () => {
-    // Logique pour récupérer les projets depuis votre API
     try {
       const response = await fetch('http://localhost:5678/api/works');
       const data = await response.json();
@@ -24,7 +22,6 @@ function AdminPanel() {
   };
 
   const deleteProject = async (id) => {
-    // Logique pour supprimer un projet
     try {
       const token = localStorage.getItem('token');
       await fetch(`http://localhost:5678/api/works/${id}`, {
@@ -35,7 +32,6 @@ function AdminPanel() {
           'authorization': `Bearer ${token}`,
         },
       });
-      // Rafraîchir la liste des projets après la suppression
       fetchProjects();
     } catch (error) {
       console.error('Error deleting project:', error);
@@ -69,20 +65,16 @@ function AdminPanel() {
         ))}
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="modal">
           <div className="modal-content">
             <span className="close" onClick={closeModal}>&times;</span>
-            {/* Content for editing project goes here */}
           </div>
         </div>
       )}
 
-      {/* Add Project Form */}
       {showAddProject && (
         <div className="add-project-form">
-          {/* Form for adding a new project goes here */}
         </div>
       )}
 

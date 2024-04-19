@@ -14,11 +14,14 @@
   }
 
   .cards-container {
-    display: flex; /* Modifier pour une disposition en ligne */
-    flex-wrap: wrap; /* Permettre le retour à la ligne des cartes si nécessaire */
+    display: flex;
+    /* Modifier pour une disposition en ligne */
+    flex-wrap: wrap;
+    /* Permettre le retour à la ligne des cartes si nécessaire */
     gap: 10px;
     padding: 20px;
-    justify-content: center; /* Centrer les cartes horizontalement */
+    justify-content: center;
+    /* Centrer les cartes horizontalement */
   }
 
   .card {
@@ -28,7 +31,8 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
-    min-width: 250px; /* Définir une largeur minimale pour les cartes */
+    min-width: 250px;
+    /* Définir une largeur minimale pour les cartes */
   }
 
   .card p {
@@ -44,7 +48,8 @@
   .bottom-text {
     margin-top: 20px;
     text-align: center;
-    width: 100%; /* Ajuster la largeur à 100% pour centrer horizontalement */
+    width: 100%;
+    /* Ajuster la largeur à 100% pour centrer horizontalement */
   }
 
   .bottom-text p {

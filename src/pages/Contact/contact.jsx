@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import Modale from '../../components/Modale/Modale'; // Importer le composant de modale
+import Modale from '../../components/Modale/Modale';
 import './contact.scss';
 import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf';
 
@@ -95,7 +95,7 @@ const ContactPage = () => {
             <embed src={CV} type="application/pdf" width="100%" height="600px" />
           </div>
           <button type="button" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
-          </Modale>
+        </Modale>
       </form>
     </div>
   );

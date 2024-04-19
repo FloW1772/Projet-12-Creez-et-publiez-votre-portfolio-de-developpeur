@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Logo from '../../assets/logo/logo.jpg';
 import './Presentation.scss';
-import Modale from '../../components/Modale/Modale'; // Importer le composant de modale
+import Modale from '../../components/Modale/Modale';
 import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf';
 
 const Presentation = () => {
