@@ -14,12 +14,8 @@ import Redux from '../../assets/icones/logo_dvl/Redux.webp'
 import Sass from '../../assets/icones/logo_dvl/Sass.webp'
 import Swagger from '../../assets/icones/logo_dvl/swagger-banner.webp'
 import VsCode from '../../assets/icones/logo_dvl/VsCode.webp'
-import Vue from '../../assets/icones/logo_dvl/Vuejs_logo.jpeg'
+import Vue from '../../assets/icones/logo_dvl/Vue.js.webp'
 import Yarn from '../../assets/icones/logo_dvl/Yarn.webp'
-
-
-
-
 
 const competenceImages = {
   HTML: Html,
@@ -27,7 +23,7 @@ const competenceImages = {
   JavaScript: JS,
   React: react,
   Sass: Sass,
-  Node: JSno,
+  Nodejs: JSno,
   'Visual Studio Code': VsCode,
   Vuejs: Vue,
   Figma: Figma,
@@ -35,9 +31,8 @@ const competenceImages = {
   'React Router': RR,
   'Create React App': CRA,
   'Redux Toolkit': Redux,
-  'React developer Tools': ReactDT,
+  'React Developer Tools': ReactDT,
   Yarn: Yarn,
-  // Ajoutez d'autres compétences avec leurs images ici
 };
 
 const Competences = ({ competences }) => {
@@ -50,7 +45,9 @@ const Competences = ({ competences }) => {
       <div className="cards-container">
         {competences.map((competence, index) => (
           <div className="card" key={index}>
-            <img src={competenceImages[competence]} alt={competence} className="competence-image" />
+            {competenceImages[competence] && (
+              <img src={competenceImages[competence]} alt={competence} className="competence-image" />
+            )}
             <p>{competence}</p>
           </div>
         ))}

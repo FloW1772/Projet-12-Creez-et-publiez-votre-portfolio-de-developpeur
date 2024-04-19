@@ -4,7 +4,7 @@ import Competences from '../../components/competences/Competences'; // Importer 
 import './home.scss';
 
 export default function Home() {
-  const competences = ['HTML', 'CSS', 'JavaScript', 'React', 'Sass', 'SEO', 'Vue.js', 'Figma', 'Site Web dynamique', 'API Swagger', 'Planification', 'Gestion de projet', 'React Router', 'Create React App', 'Debuggage', 'React Developer Tools', 'Yarn', 'Node.js', 'Redux Toolkit', 'Visual Studio Code'];
+  const competences = ['HTML', 'CSS', 'JavaScript', 'React', 'Sass', 'SEO', 'Vuejs', 'Figma', 'Site Web dynamique', 'API Swagger', 'Planification', 'Gestion de projet', 'React Router', 'Create React App', 'Debuggage', 'React Developer Tools', 'Yarn', 'Nodejs', 'Redux Toolkit', 'Visual Studio Code'];
 
   return (
     <div>
