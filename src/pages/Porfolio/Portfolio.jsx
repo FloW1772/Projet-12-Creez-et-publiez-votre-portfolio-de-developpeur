@@ -81,17 +81,18 @@ export default function Portfolio() {
       <h1 className="portfolio-title">Portfolio :</h1>
       <div className="project-cards">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            cover={project.cover}
-          >
-            <button onClick={() => handleButtonClick(project.link)}>
-              Voir le projet !
-            </button>
-          </ProjectCard>
+         <ProjectCard
+         key={project.id}
+         id={project.id}
+         title={project.title}
+         description={project.description}
+         cover={project.cover}
+         link={project.link} // assurez-vous que la propriété 'link' est passée ici
+       >
+         <button onClick={() => handleButtonClick(project.link)}>
+           Voir le projet !
+         </button>
+       </ProjectCard>
         ))}
       </div>
     </div>
