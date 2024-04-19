@@ -29,7 +29,7 @@ const Presentation = () => {
       <p>Développeur Front-End</p>
       <a href="/contact" className="button">Contactez-moi !</a>
       {/* Bouton pour ouvrir la modale */}
-      <button type="button" onClick={openModale}>Voir CV</button>
+      <button type="button" className="button" onClick={openModale}>Voir CV</button>
 
       {/* Modale pour afficher le PDF */}
       <Modale ref={modalRef}>
