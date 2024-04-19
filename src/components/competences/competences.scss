@@ -25,6 +25,8 @@
   }
 
   .card {
+    display: flex; /* Ajout pour aligner l'image et le texte sur la même ligne */
+    align-items: center; /* Ajout pour aligner l'image et le texte sur la même ligne */
     background-color: #f5f5f5;
     border-radius: 5px;
     padding: 20px;
@@ -33,6 +35,11 @@
     cursor: pointer;
     min-width: 250px;
     /* Définir une largeur minimale pour les cartes */
+  }
+
+  .card img {
+    width: 24px; /* Taille des images */
+    margin-right: 10px; /* Espacement entre l'image et le texte */
   }
 
   .card p {
@@ -72,5 +79,9 @@
   .button:hover {
     background-color: #0056b3;
     transform: scale(1.1);
+  }
+
+  .competence-image {
+    width: 5px; /* Taille des images */
   }
 }

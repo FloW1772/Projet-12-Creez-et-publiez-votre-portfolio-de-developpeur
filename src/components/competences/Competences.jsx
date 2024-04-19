@@ -1,4 +1,3 @@
-// Ajoutez les imports nécessaires
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './competences.scss';
@@ -8,7 +7,7 @@ import Figma from '../../assets/icones/logo_dvl/Figma.webp'
 import Html from '../../assets/icones/logo_dvl/Html.webp'
 import JS from '../../assets/icones/logo_dvl/Javascript.webp'
 import Node from '../../assets/icones/logo_dvl/Node.webp'
-import RDT from '../../assets/icones/logo_dvl/React-Developer-Tools.webp'
+import ReactDT from '../../assets/icones/logo_dvl/React-Developer-Tools.webp'
 import RR from '../../assets/icones/logo_dvl/react-router.webp'
 import react from '../../assets/icones/logo_dvl/React.webp'
 import Redux from '../../assets/icones/logo_dvl/Redux.webp'
@@ -21,13 +20,14 @@ import Yarn from '../../assets/icones/logo_dvl/Yarn.webp'
 
 
 
-// Définissez l'objet associatif pour les compétences et leurs images
+
 const competenceImages = {
   HTML: Html,
   CSS: CSS,
   JavaScript: JS,
   React: react,
   Sass: Sass,
+  Node: Node,
   'Visual Studio Code': VsCode,
   Vuejs: Vue,
   Figma: Figma,
@@ -35,11 +35,8 @@ const competenceImages = {
   'React Router': RR,
   'Create React App': CRA,
   'Redux Toolkit': Redux,
-  'React router' : RR,
-  'React Developper Tools' : RDT,
-  Nodejs: Node,
+  'React developer Tools': ReactDT,
   Yarn: Yarn,
-
   // Ajoutez d'autres compétences avec leurs images ici
 };
 
@@ -53,7 +50,7 @@ const Competences = ({ competences }) => {
       <div className="cards-container">
         {competences.map((competence, index) => (
           <div className="card" key={index}>
-            <img src={competenceImages[competence]} alt={competence} />
+            <img src={competenceImages[competence]} alt={competence} className="competence-image" />
             <p>{competence}</p>
           </div>
         ))}
