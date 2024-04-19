@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './competences.scss';
 import CRA from '../../assets/icones/logo_dvl/Create_React_App.webp'
 import CSS from '../../assets/icones/logo_dvl/CSS.webp'
@@ -40,16 +39,16 @@ const Competences = ({ competences }) => {
     <div className="competences">
       <h2>Compétences :</h2>
 
-      <p>Mes compétences se sont développées. Grâce au travail effectué sur différents projets pour voir mes projets, c'est <Link to="/portfolio"> <strong>ici.</strong></Link>.</p>
+      <p>Mes compétences se sont développées. Grâce au travail effectué sur différents projets pour voir mes projets, c'est <a href="/portfolio"> <strong>ici.</strong></a>.</p>
 
       <div className="cards-container">
         {competences.map((competence, index) => (
-          <div className="card" key={index}>
-            {competenceImages[competence] && (
-              <img src={competenceImages[competence]} alt={competence} className="competence-image" />
+          <a href={competence.url} target="_blank" rel="noopener noreferrer" key={index} className="card">
+            {competenceImages[competence.name] && (
+              <img src={competenceImages[competence.name]} alt={competence.name} className="competence-image" />
             )}
-            <p>{competence}</p>
-          </div>
+            <p>{competence.name}</p>
+          </a>
         ))}
       </div>
       <div className="bottom-text">
