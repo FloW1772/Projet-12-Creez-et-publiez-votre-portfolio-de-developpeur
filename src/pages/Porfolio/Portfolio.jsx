@@ -6,6 +6,7 @@ import nina from '../../assets/logo/nina.webp';
 import ohmyfood from '../../assets/logo/ohmyfood.png';
 import Print from '../../assets/logo/Print-it.png';
 import sophie from '../../assets/logo/sophie-bluel.png';
+import './portfolio.scss'
 
 export default function Portfolio() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -77,7 +78,7 @@ export default function Portfolio() {
 
   return (
     <div>
-      <h1 className="portfolio-title">Portfolio</h1>
+      <h1 className="portfolio-title">Portfolio :</h1>
       <div className="project-cards">
         {projects.map((project) => (
           <ProjectCard
@@ -95,4 +96,4 @@ export default function Portfolio() {
       </div>
     </div>
   );
-}
+}  
