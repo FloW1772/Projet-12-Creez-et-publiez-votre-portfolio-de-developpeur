@@ -38,11 +38,11 @@ const Presentation = () => {
     <header className="header">
       <img src={Logo} alt="Florentin Guiné - Logo" className="project-cover" />
       <h1>Salut, Je suis Florentin Guiné</h1>
-      <button type="button" className="button" onClick={openModale}>En savoir plus</button> {/* Nouveau bouton */}
+      <button type="button" className="button" onClick={openModale}>En savoir plus sur moi</button> {/* Nouveau bouton */}
       <p>Développeur Front-End</p>
       <a href="/contact" className="button">Contactez-moi !</a>
       {/* Bouton pour ouvrir la modale du CV */}
-      <button type="button" className="button" onClick={openCVModale}>Voir CV !</button>
+      <button type="button" className="button" onClick={openCVModale}>Voir mon CV !</button>
 
       {/* Modale pour afficher les informations personnelles */}
       <Modale ref={modalRef} >
@@ -59,7 +59,7 @@ const Presentation = () => {
       <Modale ref={cvModalRef}>
         <div>
           {/* Insérez le composant ou l'élément pour afficher le PDF */}
-          <embed src={CV} type="application/pdf" width="100%" height="600px" />
+          <embed src={CV} type="application/pdf" width="100%" height="500px" />
         </div>
         <button type="button" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
       </Modale>
