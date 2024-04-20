@@ -1,50 +1,11 @@
-// .header {
-//   background-color: #333;
-//   color: #fff;
-//   padding: 20px 0;
-// }
-
-// .navbar {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .logo {
-//   font-size: 1.5rem;
-//   font-weight: bold;
-//   margin-left: 15px;
-  
-// }
-
-// .nav-links {
-//   list-style-type: none;
-//   display: flex;
-// }
-
-// .nav-links li {
-//   margin-right: 20px;
-// }
-
-// .nav-links li a {
-//   color: #fff;
-//   text-decoration: none;
-//   transition: color 0.3s ease;
-// }
-
-// .nav-links li a:hover {
-//   color: #ffd700;
-// }
 .header {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
 
-  // Media Queries pour différentes tailles d'écran
 
-  // Pour les téléphones (par exemple, jusqu'à 768px de largeur)
   @media (max-width: 768px) {
-    padding: 10px 0; // Réduire l'espace intérieur pour les téléphones
+    padding: 10px 0; 
   }
 }
 
@@ -53,12 +14,10 @@
   justify-content: space-between;
   align-items: center;
 
-  // Media Queries pour différentes tailles d'écran
 
-  // Pour les téléphones (par exemple, jusqu'à 768px de largeur)
   @media (max-width: 768px) {
-    flex-direction: column; // Afficher les éléments de la navbar en colonne pour les téléphones
-    align-items: flex-start; // Aligner les éléments à gauche pour les téléphones
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 }
 
@@ -67,12 +26,10 @@
   font-weight: bold;
   margin-left: 15px;
 
-  // Media Queries pour différentes tailles d'écran
 
-  // Pour les téléphones (par exemple, jusqu'à 768px de largeur)
   @media (max-width: 768px) {
-    margin-left: 0; // Supprimer la marge à gauche pour les téléphones
-    margin-bottom: 10px; // Ajouter une marge en bas pour les téléphones
+    margin-left: 0; 
+    margin-bottom: 10px; 
   }
 }
 
@@ -80,24 +37,19 @@
   list-style-type: none;
   display: flex;
 
-  // Media Queries pour différentes tailles d'écran
-
-  // Pour les téléphones (par exemple, jusqu'à 768px de largeur)
   @media (max-width: 768px) {
-    flex-direction: column; // Afficher les liens de navigation en colonne pour les téléphones
-    align-items: center; // Centrer les liens de navigation pour les téléphones
+    flex-direction: column; 
+    align-items: center; 
   }
 }
 
 .nav-links li {
   margin-right: 20px;
 
-  // Media Queries pour différentes tailles d'écran
 
-  // Pour les téléphones (par exemple, jusqu'à 768px de largeur)
   @media (max-width: 768px) {
-    margin-right: 0; // Supprimer la marge à droite pour les téléphones
-    margin-bottom: 10px; // Ajouter une marge en bas pour les téléphones
+    margin-right: 0; 
+    margin-bottom: 10px; 
   }
 }
 

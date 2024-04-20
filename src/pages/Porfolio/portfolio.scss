@@ -1,65 +1,16 @@
-// .portfolio-container {
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   gap: 20px;
-//   padding: 20px;
-
-//   .project-card {
-//     background-color: #fff;
-//     border-radius: 8px;
-//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//     overflow: hidden;
-
-//     img {
-//       width: 100%;
-//       height: 200px;
-//       object-fit: cover;
-//       border-bottom: 1px solid #ddd;
-//     }
-
-//     .card-content {
-//       padding: 20px;
-
-//       h2 {
-//         font-size: 1.5rem;
-//         margin-bottom: 10px;
-//       }
-
-//       p {
-//         color: #666;
-//         margin-bottom: 20px;
-//       }
-
-//       .read-more {
-//         display: inline-block;
-//         color: #007bff;
-//         text-decoration: none;
-
-//         &:hover {
-//           text-decoration: underline;
-          
-//         }
-//       }
-//     }
-//   }
-// }
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
-  margin-top: 20px; /* Ajout d'une marge en haut pour séparer du contenu précédent */
+  margin-top: 20px;
 
-  // Media Queries pour différentes tailles d'écran
-
-  // Pour les téléphones (par exemple, jusqu'à 768px de largeur)
   @media (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr); // Affiche une seule colonne pour les téléphones
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  // Pour les tablettes (par exemple, de 769px à 1024px de largeur)
   @media (min-width: 769px) and (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr); // Affiche deux colonnes pour les tablettes
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .project-card {

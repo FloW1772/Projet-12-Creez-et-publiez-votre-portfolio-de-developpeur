@@ -1,43 +1,9 @@
-// .footer {
-//   background-color: #333;
-//   color: #fff;
-//   padding: 20px 0;
-//   text-align: center;
-//   margin-top: 11.97%;
-
-//   .footer-content {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     p {
-//       margin-bottom: 10px;
-//     }
-
-//     .social-icons {
-//       a {
-//         color: #fff;
-//         text-decoration: none;
-//         margin: 0 5px;
-//         transition: color 0.3s ease;
-
-//         &:hover {
-//           color: #007bff;
-//         }
-
-//         i {
-//           font-size: 24px;
-//         }
-//       }
-//     }
-//   }
-// }
 .footer {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  margin-top: 11.97%; // Vous pouvez supprimer cette ligne si elle n'est pas nécessaire
+  margin-top: 11.97%; 
 
   .footer-content {
     display: flex;
@@ -66,12 +32,10 @@
     }
   }
 
-  // Media Queries pour différentes tailles d'écran
 
-  // Pour les téléphones (par exemple, jusqu'à 768px de largeur)
   @media (max-width: 768px) {
     .footer-content {
-      flex-direction: column; // Affiche les éléments de la footer-content en colonne pour les téléphones
+      flex-direction: column;
     }
   }
 }

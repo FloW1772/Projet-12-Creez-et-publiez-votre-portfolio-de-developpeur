@@ -1,92 +1,9 @@
-// .competences {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-
-
-//   h2 {
-//     font-size: 24px;
-//     color: #333;
-//     margin-bottom: 15px;
-//     // margin-top: 15%;
-//     text-decoration: underline;
-//   }
-
-//   .cards-container {
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 10px;
-//     padding: 20px;
-//     justify-content: center;
-//   }
-
-//   .card {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: #f5f5f5;
-//     border-radius: 5px;
-//     padding: 20px;
-//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-//     transition: transform 0.3s ease;
-//     cursor: pointer;
-//     min-width: 250px;
-//     text-decoration: none;
-//   }
-  
-//   .card img {
-//     width: 50px;
-//     margin-bottom: 10px;
-//   }
-  
-//   .card p {
-//     margin: 0;
-//     font-size: 16px;
-//     color: #666;
-//   }
-
-//   .card:hover {
-//     transform: scale(1.1);
-//   }
-
-//   .bottom-text {
-//     margin-top: 20px;
-//     text-align: center;
-//     width: 100%;
-//   }
-
-//   .bottom-text p {
-//     margin-bottom: 10px;
-//     font-size: 16px;
-//     color: #666;
-//   }
-
-//   .button {
-//     padding: 10px 20px;
-//     background-color: #007bff;
-//     color: #fff;
-//     border: none;
-//     border-radius: 5px;
-//     font-size: 16px;
-//     cursor: pointer;
-//     transition: background-color 0.3s ease, transform 0.3s ease;
-//   }
-
-//   .button:hover {
-//     background-color: #0056b3;
-//     transform: scale(1.1);
-//   }
-
-// }
 .competences {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
 
   h2 {
     font-size: 24px;
@@ -101,7 +18,7 @@
     gap: 10px;
     padding: 20px;
     justify-content: center;
-    margin-top: 20px; /* Ajout d'une marge en haut pour séparer du titre */
+    margin-top: 20px;
   }
 
   .card {
@@ -155,7 +72,7 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 20px; /* Ajout d'une marge en haut pour séparer du texte */
+    margin-top: 20px;
   }
 
   .button:hover {
@@ -163,7 +80,7 @@
     transform: scale(1.1);
   }
 
-  // Media Queries
+
   @media (max-width: 768px) {
     .cards-container {
       padding: 10px;
