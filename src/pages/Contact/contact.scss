@@ -1,16 +1,17 @@
 // .contact-page {
 //   max-width: 600px;
 //   margin: 0 auto;
-//   padding: 20px;
+//   padding: 50px;
 
 //   h1 {
 //     font-size: 24px;
-//     margin-bottom: 20px;
+//     margin-bottom: 50px;
+//     margin-top: 10px;
 //   }
 
 //   label {
 //     display: block;
-//     margin-bottom: 10px;
+//     margin-bottom: 20px;
 //     font-weight: bold;
 //   }
 
@@ -22,6 +23,7 @@
 //     border: 1px solid #ccc;
 //     border-radius: 4px;
 //     box-sizing: border-box;
+//     margin-top: 20px; /* Ajout d'un espace au-dessus de chaque zone de texte */
 //   }
 
 //   button {
@@ -32,16 +34,18 @@
 //     border-radius: 4px;
 //     cursor: pointer;
 //     transition: background-color 0.3s ease;
+//     margin-top: 10px; /* Ajout d'un espace au-dessus de chaque bouton */
 
 //     &:hover {
 //       background-color: #0056b3;
 //     }
 //   }
 
-//   // Ajout de l'espace entre les boutons
+//   /* Ajout de l'espace entre les boutons */
 //   button[type="submit"],
 //   button[type="button"] {
 //     margin-right: 15%; // Ajoute une marge à droite de tous les boutons sauf le dernier
+//     margin-top: 20px; /* Ajout d'un espace au-dessus de chaque bouton */
 //   }
 // }
 .contact-page {
@@ -92,5 +96,28 @@
   button[type="button"] {
     margin-right: 15%; // Ajoute une marge à droite de tous les boutons sauf le dernier
     margin-top: 20px; /* Ajout d'un espace au-dessus de chaque bouton */
+  }
+
+  // Media Queries pour différentes tailles d'écran
+
+  // Pour les téléphones (par exemple, jusqu'à 768px de largeur)
+  @media (max-width: 768px) {
+    .contact-page {
+      padding: 30px;
+    }
+  }
+
+  // Pour les tablettes (par exemple, de 768px à 1024px de largeur)
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .contact-page {
+      max-width: 80%; // Adapte la largeur maximale pour les tablettes
+    }
+  }
+
+  // Pour les PC (par exemple, à partir de 1025px de largeur)
+  @media (min-width: 1025px) {
+    .contact-page {
+      max-width: 800px; // Adapte la largeur maximale pour les PC
+    }
   }
 }
