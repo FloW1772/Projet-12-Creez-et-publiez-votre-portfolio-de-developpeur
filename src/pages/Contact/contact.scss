@@ -37,4 +37,11 @@
       background-color: #0056b3;
     }
   }
+
+  // Ajout de l'espace entre les boutons
+  button[type="submit"],
+  button[type="button"] {
+    margin-right: 15%; // Ajoute une marge à droite de tous les boutons sauf le dernier
+  }
 }
+  
