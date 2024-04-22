@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import events from '../../assets/logo/events.png';
 import Kasa from '../../assets/logo/Kasa.png';
@@ -6,23 +6,23 @@ import nina from '../../assets/logo/nina.webp';
 import ohmyfood from '../../assets/logo/ohmyfood.png';
 import Print from '../../assets/logo/Print-it.png';
 import sophie from '../../assets/logo/sophie-bluel.png';
-import GitHubPage from '../../components/GitHubPage/GitHubPage';
+// import GitHubPage from '../../components/GitHubPage/GitHubPage';
 import './portfolio.scss';
 
 export default function Portfolio() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  // const toggleModal = () => {
+  //   setIsModalOpen(!isModalOpen);
+  // };
 
-  const addProject = (newProject) => {
-    console.log('Nouveau projet ajouté:', newProject);
-  };
+  // const addProject = (newProject) => {
+  //   console.log('Nouveau projet ajouté:', newProject);
+  // };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
   const projects = [
     {

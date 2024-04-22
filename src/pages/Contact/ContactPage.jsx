@@ -120,7 +120,7 @@ const ContactPage = () => {
           <div>
             <p>Voici les autres moyens existants pour me contacter :</p>
             <p>
-              LinkedIn: <a href="https://www.linkedin.com/in/florentin-guin%C3%A9-5165931a1/" target="_blank">Florentin Guiné</a>
+              LinkedIn: <a href="https://www.linkedin.com/in/florentin-guin%C3%A9-5165931a1/" target="_blank" rel='noopener'>Florentin Guiné</a>
             </p>
             <p>Numéro de téléphone: 06-49-47-75-14</p>
           </div>
