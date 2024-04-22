@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import Home from './pages/home/Home';
-import Contact from './pages/contact/Contact';
+import Home from '/pages/home/Home.jsx';
+import Contact from '/pages/contact/Contact.jsx';
 import Portfolio from './pages/portfolio/Portfolio';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
