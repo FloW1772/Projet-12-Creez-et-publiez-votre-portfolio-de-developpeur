@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import Home from './pages/home/HomePage.jsx';
+import Home from './pages/Home/HomePage.jsx';
 import Portfolio from './pages/portfolio/Portfolio';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ContactPage from './pages/contact/ContactPage.jsx';
+import ContactPage from './pages/Contact/ContactPage.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
