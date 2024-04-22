@@ -3,7 +3,7 @@ import Presentation from '../../components/presentation/Presentation';
 import Competences from '../../components/competences/Competences';
 import './home.scss';
 
-export default function Home() {
+export default function HomePage() {
   const competences = [
     { name: 'HTML', url: 'https://developer.mozilla.org/fr/docs/Glossary/HTML5' },
     { name: 'CSS', url: 'https://developer.mozilla.org/fr/docs/Web/CSS' },
