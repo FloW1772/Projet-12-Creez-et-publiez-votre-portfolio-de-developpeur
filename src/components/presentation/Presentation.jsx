@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Logo from '../../assets/logo/logo.jpg';
-import './presentation.scss';
+import './Presentation.scss';
 import Modale from '../Modale/Modale';
 import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf';
 
