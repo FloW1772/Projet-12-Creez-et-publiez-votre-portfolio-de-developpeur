@@ -1,5 +1,5 @@
 import React from 'react';
-import Presentation from '../../components/presentation/presentation';
+import Presentation from '../../components/presentation/Presentation';
 import Competences from '../../components/competences/Competences';
 import './home.scss';
 
