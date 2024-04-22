@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ProjectCard.scss'
+import './projectcard.scss'
 
 const ProjectCard = ({ id, cover, title, description, link, githubPage }) => {
   const [modalContent, setModalContent] = useState(null);

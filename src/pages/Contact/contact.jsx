@@ -3,7 +3,7 @@ import Modale from '../../components/Modale/Modale';
 import './contact.scss';
 import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf';
 
-const ContactPage = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -132,4 +132,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default Contact;

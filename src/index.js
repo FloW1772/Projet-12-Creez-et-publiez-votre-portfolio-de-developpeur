@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import Home from './pages/Home/Home';
-import Contact from './pages/Contact/contact';
-import Portfolio from './pages/Porfolio/Portfolio';
+import Home from './pages/home/Home';
+import Contact from './pages/contact/Contact';
+import Portfolio from './pages/portfolio/Portfolio';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
