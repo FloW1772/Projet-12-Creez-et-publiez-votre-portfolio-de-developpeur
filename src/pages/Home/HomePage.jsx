@@ -1,6 +1,7 @@
 import React from 'react';
 import Presentation from '../../components/presentation/Presentation';
 import Competences from '../../components/competences/Competences';
+import Projet from '../../components/Projet/Projet';
 import './home.scss';
 
 export default function HomePage() {
@@ -27,9 +28,16 @@ export default function HomePage() {
     { name: 'Visual Studio Code', url: 'https://code.visualstudio.com/' },
   ];
 
+  const images = [
+    { url: 'url_de_votre_image_1.jpg' },
+    { url: 'url_de_votre_image_2.jpg' },
+    // Ajoutez autant d'objets { url: 'url_de_votre_image_x.jpg' } que nécessaire
+  ];
+
   return (
     <div>
       <Presentation />
+      <Projet images={images} /> {/* Utilisez le composant Projet en passant les images en tant que prop */}
       <Competences competences={competences} />
     </div>
   );
