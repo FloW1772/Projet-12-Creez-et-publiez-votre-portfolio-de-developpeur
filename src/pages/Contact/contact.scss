@@ -46,7 +46,9 @@
     margin-right: 15%;
     margin-top: 20px;
   }
-
+  button[type="button"] {
+margin-top: 15%;
+  }
   @media (max-width: 768px) {
     .contact-page {
       padding: 30px;
