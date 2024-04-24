@@ -132,7 +132,6 @@
 //   );
 // };
 
-// export default ContactPage;
 import React, { useState, useRef } from 'react';
 import Modale from '../../components/Modale/Modale';
 import './contact.scss';

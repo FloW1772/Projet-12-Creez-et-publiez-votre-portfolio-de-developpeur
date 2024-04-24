@@ -3,10 +3,8 @@ import Presentation from '../../components/presentation/Presentation';
 import Competences from '../../components/competences/Competences';
 import Projet from '../../components/Projet/Projet';
 import './home.scss';
-import Image1 from '../../assets/images/Image1.webp'
-import Image2 from '../../assets/images/Image2.webp'
-import Image3 from '../../assets/images/Image3.webp'
-import Image4 from '../../assets/images/Image4.webp'
+import Image1 from '../../assets/images/Image_1&2.webp'
+import Image2 from '../../assets/images/Image_3&4.webp'
 import Image5 from '../../assets/images/Image5.webp'
 import Image6 from '../../assets/images/Image6.webp'
 import Image7 from '../../assets/images/Image7.webp'
@@ -42,8 +40,6 @@ export default function HomePage() {
   const images = [
     Image1,
     Image2,
-    Image3,
-    Image4,
     Image5,
     Image6,
     Image7,

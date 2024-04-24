@@ -27,21 +27,68 @@
 //   );
 // }
 // Projet.js
+// import React from 'react';
+// import Slider from 'react-slick';
+// import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
+// import './projet.scss';
+
+// export default function Projet({ images }) {
+//   const settings = {
+//     dots: true, // Afficher les indicateurs de pagination
+//     infinite: true, // Activer la lecture infinie
+//     speed: 500, // Vitesse de transition en millisecondes
+//     slidesToShow: 3, // Nombre d'images à afficher simultanément
+//     slidesToScroll: 1, // Nombre d'images à faire défiler à la fois
+//     autoplay: true, // Activer la lecture automatique
+//     autoplaySpeed: 3000, // Délai entre les diapositives en millisecondes
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 2,
+//         },
+//       },
+//       {
+//         breakpoint: 600,
+//         settings: {
+//           slidesToShow: 1,
+//         },
+//       },
+//     ],
+//   };
+
+//   return (
+//     <div className="projet-container">
+//       <Slider {...settings}>
+//         {images.map((image, index) => (
+//           <div key={index}>
+//             <img
+//               src={image}
+//               alt={`Projet ${index + 1}`}
+//               className="projet-image"
+//             />
+//           </div>
+//         ))}
+//       </Slider>
+//     </div>
+//   );
+// }
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './projet.scss';
+import './projet.scss'; // Importation du fichier de style
 
 export default function Projet({ images }) {
   const settings = {
-    dots: true, // Afficher les indicateurs de pagination
-    infinite: true, // Activer la lecture infinie
-    speed: 500, // Vitesse de transition en millisecondes
-    slidesToShow: 3, // Nombre d'images à afficher simultanément
-    slidesToScroll: 1, // Nombre d'images à faire défiler à la fois
-    autoplay: true, // Activer la lecture automatique
-    autoplaySpeed: 3000, // Délai entre les diapositives en millisecondes
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -60,17 +107,19 @@ export default function Projet({ images }) {
 
   return (
     <div className="projet-container">
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index}>
-            <img
-              src={image}
-              alt={`Projet ${index + 1}`}
-              className="projet-image"
-            />
-          </div>
-        ))}
-      </Slider>
+      <div className="slider-container">
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index} className="projet-slide">
+              <img
+                src={image}
+                alt={`Projet ${index + 1}`}
+                className="projet-image"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
