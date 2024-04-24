@@ -53,7 +53,7 @@ export default function HomePage() {
   return (
     <div>
       <Presentation />
-      <Projet images={images} /> 
+      <Projet images={images} />
       <Competences competences={competences} />
     </div>
   );
