@@ -1,10 +1,3 @@
-.projet-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Augmenter la largeur minimale des colonnes */
-    gap: 20px;
-    justify-items: center; /* Centrer les éléments horizontalement */
-  }
-  
   .projet-image {
     width: 100%;
     height: auto;
@@ -12,6 +5,7 @@
     border-radius: 10px; /* Ajouter des coins arrondis pour un aspect plus doux */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre douce */
     transition: transform 0.3s ease; /* Ajouter une transition pour une animation fluide */
+    margin-top: 20%;
   }
   
   .projet-image:hover {

@@ -7,6 +7,8 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ContactPage from './pages/Contact/ContactPage.jsx';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
