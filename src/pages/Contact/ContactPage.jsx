@@ -148,7 +148,7 @@ const ContactPage = () => {
   const [showOtherModale, setShowOtherModale] = useState(false); // État pour la deuxième modale
   const modalRef = useRef(null); // Référence pour accéder au composant de modale
   const otherModalRef = useRef(null); // Référence pour la deuxième modale
-  
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -243,31 +243,31 @@ const ContactPage = () => {
         {messageSent && <p>Message envoyé</p>}
       </form>
 
-        {/* Bouton pour ouvrir la modale CV */}
-        <button type="button" onClick={openModale}>CV</button>
+      {/* Bouton pour ouvrir la modale CV */}
+      <button type="button" onClick={openModale}>CV</button>
 
-        {/* Bouton pour ouvrir la deuxième modale "Autre moyen de contact" */}
-        <button type="button" onClick={openOtherModale}>Autre moyen de contact</button>
+      {/* Bouton pour ouvrir la deuxième modale "Autre moyen de contact" */}
+      <button type="button" onClick={openOtherModale}>Autre moyen de contact</button>
 
-        {/* Modale pour afficher le PDF */}
-        <Modale ref={modalRef}>
-          <div>
-            {/* Insérez le composant ou l'élément pour afficher le PDF */}
-            <embed src={CV} type="application/pdf" width="100%" height="600px" />
-          </div>
-          <button type="button" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
-        </Modale>
+      {/* Modale pour afficher le PDF */}
+      <Modale ref={modalRef}>
+        <div>
+          {/* Insérez le composant ou l'élément pour afficher le PDF */}
+          <embed src={CV} type="application/pdf" width="100%" height="600px" />
+        </div>
+        <button type="button" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
+      </Modale>
 
-        <Modale ref={otherModalRef}>
-          <div>
-            <p>Voici les autres moyens existants pour me contacter :</p>
-            <p>
-              LinkedIn: <a href="https://www.linkedin.com/in/florentin-guin%C3%A9-5165931a1/" target="_blank" rel='noopener'>Florentin Guiné</a>
-            </p>
-            <p>Numéro de téléphone: 06-49-47-75-14</p>
-          </div>
-          <button type="button" onClick={closeOtherModale}>Fermer</button>
-        </Modale>
+      <Modale ref={otherModalRef}>
+        <div>
+          <p>Voici les autres moyens existants pour me contacter :</p>
+          <p>
+            LinkedIn: <a href="https://www.linkedin.com/in/florentin-guin%C3%A9-5165931a1/" target="_blank" rel='noopener'>Florentin Guiné</a>
+          </p>
+          <p>Numéro de téléphone: 06-49-47-75-14</p>
+        </div>
+        <button type="button" onClick={closeOtherModale}>Fermer</button>
+      </Modale>
 
     </div>
   );

@@ -48,12 +48,12 @@ export default function HomePage() {
     Image10
   ];
 
-  
+
 
   return (
     <div>
       <Presentation />
-      <Projet images={images} /> {/* Utilisez le composant Projet en passant les images en tant que prop */}
+      <Projet images={images} /> 
       <Competences competences={competences} />
     </div>
   );

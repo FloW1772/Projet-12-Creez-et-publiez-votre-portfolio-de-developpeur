@@ -1,35 +1,23 @@
-  // .projet-image {
-  //   width: 100%;
-  //   height: auto;
-  //   object-fit: cover;
-  //   border-radius: 10px; /* Ajouter des coins arrondis pour un aspect plus doux */
-  //   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre douce */
-  //   transition: transform 0.3s ease; /* Ajouter une transition pour une animation fluide */
-  //   margin-top: 20%;
-  // }
-  
-  // .projet-image:hover {
-  //   transform: scale(1.05); /* Agrandir légèrement l'image au survol */
-  // }
   .projet-container {
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
   }
-  
+
   .slider-container {
     max-width: 100vw;
     overflow: hidden;
   }
-  
-  // .projet-slide {
-  //   /* Styles pour chaque diapositive */
-  // }
-  
+
   .projet-image {
-   max-width: 100%; /* Assure que l'image occupe toute la largeur de son conteneur */
-    max-height: 100%; /* Hauteur fixe pour toutes les images */
-  width: auto;
-  height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
   }
-  
+
+  .bottom-text {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}

@@ -73,7 +73,7 @@ export default function Portfolio() {
             link={project.link}
             githubPage={project.githubPage}
           />
-          
+
         ))}
       </div>
     </div>
