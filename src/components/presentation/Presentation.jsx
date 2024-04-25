@@ -28,7 +28,7 @@ const Presentation = () => {
       <h1>Salut, Je suis Florentin Guiné</h1>
       <div>
         <h2 className="mode">À propos de moi :</h2>
-        <p className="mode">Je suis un étudiant qui a découvert le développement informatique avec des amis et qui c'est ce qui m'a aider a aimer ça.</p>
+        <p className="mode">Je suis un étudiant qui a découvert le développement informatique grâce à des amis qui m'ont beaucoup aidé à mes débuts à apprendre et à comprendre le développement, j'ai adoré cet esprit de partage. Et cela m'a permis d'encore plus adorer le développement par la suite. </p>
         <p className="mode">J'ai beaucoup essayé d'apprendre par moi-même au début en "auto-didacte", mais cette année, j'ai décidé d'aller plus loin en me lançant dans la formation d'intégrateur web d'OpenClassroom pour me perfectionner dans le domaine.</p>
         <p className="mode">N'hésitez pas à me contacter pour discuter de vos projets et de la manière dont je peux vous aider à les concrétiser !</p>
       </div>

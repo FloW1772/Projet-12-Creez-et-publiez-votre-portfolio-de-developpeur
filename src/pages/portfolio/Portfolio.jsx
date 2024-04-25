@@ -62,7 +62,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio">
-      <h1>Portfolio</h1>
+      <h1 className="portfolio2">Portfolio :</h1>
       <div className="portfolio-container">
         {projects.map((project) => (
           <ProjectCard
