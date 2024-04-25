@@ -29,7 +29,12 @@ export default function Projet({ images }) {
   };
 
   return (
+    
     <div className="projet-container">
+      <div className="text-below-slider">
+        <p className="bottom-text">Ci-dessous, vous pouvez voir un slider montrant différentes images des différents projets,</p>
+        <p className="bottom-text">m'ayant aidé a développer mes compétences et à m'améliorer en développement.</p>
+      </div>
       <div className="slider-container">
         <Slider {...settings}>
           {images.map((image, index) => (
@@ -43,9 +48,9 @@ export default function Projet({ images }) {
           ))}
         </Slider>
       </div>
-      <div className="text-below-slider">
-        <p className="bottom-text">Ci-dessus, vous pouvez voir un slider montrant différentes images des différents projets,</p>
-        <p className="bottom-text">m'ayant aidé a développer mes compétences et à m'améliorer en développement.</p>
+      <div className="text-low-slider">
+        <p className="bottom-text">Si vous voulez voir les projets en liées avec les images du slider et ceux qui m'ont permit de développer mes compétences, c'est par<a href="/portfolio"> <strong>ici.</strong></a>.</p>
+
       </div>
     </div>
   );

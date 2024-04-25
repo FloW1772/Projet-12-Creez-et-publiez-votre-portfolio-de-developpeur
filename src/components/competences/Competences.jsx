@@ -39,7 +39,6 @@ const Competences = ({ competences }) => {
     <div className="competences">
       <h2>Compétences :</h2>
 
-      <p className="bottom-text">Mes compétences se sont développées. Grâce au travail effectué sur différents projets pour voir mes projets, c'est <a href="/portfolio"> <strong>ici.</strong></a>.</p>
 
       <div className="cards-container">
         {competences.map((competence, index) => (
