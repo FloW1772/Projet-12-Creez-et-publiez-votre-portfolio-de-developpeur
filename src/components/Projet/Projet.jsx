@@ -51,7 +51,7 @@ export default function Projet({ images }) {
       </div>
       <div className="text-low-slider">
       <div className="button-container">
-        <p className="bottom-text">Si vous voulez voir les projets en liées avec les images du slider et ceux qui m'ont permit de développer mes compétences, cliquer sur le bouton ci-dessous !</p>
+        <p className="bottom-text">Si vous voulez voir les projets en lien avec les images du slider et ceux qui m'ont permit de développer mes compétences, cliquer sur le bouton ci-dessous !</p>
         <a href="/portfolio" className="button">Mes projets !</a>
         </div>
       </div>

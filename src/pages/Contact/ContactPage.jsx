@@ -121,7 +121,7 @@ const ContactPage = () => {
           {/* Insérez le composant ou l'élément pour afficher le PDF */}
           <embed src={CV} type="application/pdf" width="100%" height="600px" />
         </div>
-        <button type="button2" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
+        <button type="button" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
       </Modale>
 
       <Modale ref={otherModalRef}>
