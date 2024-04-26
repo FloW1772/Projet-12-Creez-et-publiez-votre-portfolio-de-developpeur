@@ -29,8 +29,9 @@ export default function Projet({ images }) {
   };
 
   return (
-    
+
     <div className="projet-container">
+          <h2>Mes projets :</h2>
       <div className="text-below-slider">
         <p className="bottom-text">Ci-dessous, vous pouvez voir un slider montrant différentes images des différents projets,</p>
         <p className="bottom-text">m'ayant aidé a développer mes compétences et à m'améliorer en développement.</p>
@@ -49,8 +50,10 @@ export default function Projet({ images }) {
         </Slider>
       </div>
       <div className="text-low-slider">
-        <p className="bottom-text">Si vous voulez voir les projets en liées avec les images du slider et ceux qui m'ont permit de développer mes compétences, c'est par <a href="/portfolio"> <strong>ici.</strong></a>.</p>
-
+      <div className="button-container">
+        <p className="bottom-text">Si vous voulez voir les projets en liées avec les images du slider et ceux qui m'ont permit de développer mes compétences, cliquer sur le bouton ci-dessous !</p>
+        <a href="/portfolio" className="button">Contactez-moi !</a>
+        </div>
       </div>
     </div>
   );
