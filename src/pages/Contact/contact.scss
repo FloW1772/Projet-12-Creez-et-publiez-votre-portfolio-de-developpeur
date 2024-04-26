@@ -35,6 +35,8 @@
     transition: background-color 0.3s ease;
     margin-top: 10px;
     font-size: 16px;
+    text-decoration: underline;
+
 
 
     &:hover {
@@ -51,6 +53,13 @@
   button[type="button"] {
     margin-top: 15%;
   }
+
+  button[type="button2"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2px;
+  }
+  
 
   @media (max-width: 768px) {
     .contact-page {

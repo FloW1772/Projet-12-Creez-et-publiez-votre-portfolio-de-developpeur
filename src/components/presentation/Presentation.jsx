@@ -42,7 +42,7 @@ const Presentation = () => {
           {/* Insérez le composant ou l'élément pour afficher le PDF */}
           <embed src={CV} type="application/pdf" width="100%" height="500px" />
         </div>
-        <button type="button" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
+        <button type="button" className="button button2" onClick={closeModale}>Fermer</button>
       </Modale>
     </header>
   );
