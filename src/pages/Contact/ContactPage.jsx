@@ -110,7 +110,7 @@ const ContactPage = () => {
       </form>
 
       {/* Bouton pour ouvrir la modale CV */}
-      <button type="button" onClick={openModale}>CV</button>
+      <button type="button" id='btn-modale-pdf' onClick={openModale}>CV</button>
 
       {/* Bouton pour ouvrir la deuxième modale "Autre moyen de contact" */}
       <button type="button" onClick={openOtherModale}>Autre moyen de contact</button>
@@ -119,7 +119,7 @@ const ContactPage = () => {
       <Modale ref={modalRef}>
         <div>
           {/* Insérez le composant ou l'élément pour afficher le PDF */}
-          <embed src={CV} type="application/pdf" width="100%" height="600px" />
+          <embed src={CV} type="application/pdf"  />
         </div>
         <button type="button" onClick={closeModale}>Fermer</button> {/* Bouton pour fermer la modale */}
       </Modale>

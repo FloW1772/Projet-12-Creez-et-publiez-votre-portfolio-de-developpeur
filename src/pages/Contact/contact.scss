@@ -35,7 +35,7 @@
     transition: background-color 0.3s ease;
     margin-top: 10px;
     font-size: 16px;
-    text-decoration: underline;
+    text-decoration: none;
 
 
 
@@ -59,11 +59,17 @@
     margin: 0 auto;
     margin-top: 2px;
   }
-  
+}
+  #btn-modale-pdf{
+    display: block;
+  }
 
   @media (max-width: 768px) {
     .contact-page {
       padding: 30px;
+    }
+    #btn-modale-pdf{
+      display: none;
     }
   }
 
@@ -78,4 +84,3 @@
       max-width: 800px;
     }
   }
-}
