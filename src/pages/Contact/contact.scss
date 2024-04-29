@@ -1,3 +1,89 @@
+// .contact-page {
+//   max-width: 600px;
+//   margin: 0 auto;
+//   padding: 50px;
+
+//   h1 {
+//     font-size: 24px;
+//     margin-bottom: 50px;
+//     margin-top: 10px;
+//   }
+
+//   label {
+//     display: block;
+//     margin-bottom: 20px;
+//     font-weight: bold;
+//   }
+
+//   input,
+//   textarea {
+//     width: 100%;
+//     padding: 10px;
+//     margin-bottom: 20px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     box-sizing: border-box;
+//     margin-top: 20px;
+//   }
+
+//   button {
+//     background-color: #007bff;
+//     color: #fff;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 5px;
+//     transition: background-color 0.3s ease;
+//     margin-top: 10px;
+//     font-size: 16px;
+//     text-decoration: none;
+
+
+
+//     &:hover {
+//       background-color: #0056b3;
+//     }
+//   }
+
+//   button[type="submit"],
+//   button[type="button"] {
+//     margin-right: 15%;
+//     margin-top: 20px;
+//   }
+
+//   button[type="button"] {
+//     margin-top: 15%;
+//   }
+
+//   button[type="button2"] {
+//     display: block;
+//     margin: 0 auto;
+//     margin-top: 2px;
+//   }
+// }
+//   #btn-modale-pdf{
+//     display: block;
+//   }
+
+//   @media (max-width: 768px) {
+//     .contact-page {
+//       padding: 30px;
+//     }
+//     #btn-modale-pdf{
+//       display: none;
+//     }
+//   }
+
+//   @media (min-width: 768px) and (max-width: 1024px) {
+//     .contact-page {
+//       max-width: 80%;
+//     }
+//   }
+
+//   @media (min-width: 1025px) {
+//     .contact-page {
+//       max-width: 800px;
+//     }
+//   }
 .contact-page {
   max-width: 600px;
   margin: 0 auto;
@@ -37,8 +123,6 @@
     font-size: 16px;
     text-decoration: none;
 
-
-
     &:hover {
       background-color: #0056b3;
     }
@@ -59,7 +143,7 @@
     margin: 0 auto;
     margin-top: 2px;
   }
-}
+
   #btn-modale-pdf{
     display: block;
   }
@@ -84,3 +168,4 @@
       max-width: 800px;
     }
   }
+}
