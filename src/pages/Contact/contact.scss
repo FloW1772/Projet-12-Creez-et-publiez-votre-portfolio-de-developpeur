@@ -144,19 +144,38 @@
     margin-top: 2px;
   }
 
-  #btn-modale-pdf{
+  // #btn-modale-pdf{
+  //   display: block;
+  // }
+
+  // @media (max-width: 768px) {
+  //   .contact-page {
+  //     padding: 30px;
+  //   }
+  //   #btn-modale-pdf{
+  //     display: none;
+  //   }
+  // }
+  #btn-modale-pdf {
     display: block;
   }
-
+  
+  #btn-open-pdf {
+    display: none;
+  }
+  
   @media (max-width: 768px) {
     .contact-page {
       padding: 30px;
     }
-    #btn-modale-pdf{
+    #btn-modale-pdf {
       display: none;
     }
+    #btn-open-pdf {
+      display: block;
+    }
   }
-
+  
   @media (min-width: 768px) and (max-width: 1024px) {
     .contact-page {
       max-width: 80%;
