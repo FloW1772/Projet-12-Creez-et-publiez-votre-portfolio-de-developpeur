@@ -15,6 +15,10 @@ import Swagger from '../../assets/icones/logo_dvl/swagger-banner.webp'
 import VsCode from '../../assets/icones/logo_dvl/VsCode.webp'
 import Vue from '../../assets/icones/logo_dvl/Vue.js.webp'
 import Yarn from '../../assets/icones/logo_dvl/Yarn.webp'
+import Notion from '../../assets/icones/logo_dvl/Notion.webp'
+import Trello from '../../assets/icones/logo_dvl/Trello-Logo.webp'
+import GoogleAnalytics from '../../assets/icones/logo_dvl/Google-Analytics.webp'
+import Internet from '../../assets/icones/logo_dvl/internet.webp'
 
 const competenceImages = {
   HTML: Html,
@@ -26,7 +30,11 @@ const competenceImages = {
   'Visual Studio Code': VsCode,
   Vuejs: Vue,
   Figma: Figma,
+  Planification: Trello,
+  'Gestion de projet': Notion,
+  'Site Web dynamique': Internet,
   'API Swagger': Swagger,
+  'SEO': GoogleAnalytics,
   'React Router': RR,
   'Create React App': CRA,
   'Redux Toolkit': Redux,

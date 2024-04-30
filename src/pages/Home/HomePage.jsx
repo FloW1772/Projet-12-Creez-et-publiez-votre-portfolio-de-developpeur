@@ -29,7 +29,6 @@ export default function HomePage() {
     { name: 'Gestion de projet', url: 'https://fr.wikipedia.org/wiki/Gestion_de_projet' },
     { name: 'React Router', url: 'https://reactrouter.com/en/main' },
     { name: 'Create React App', url: 'https://create-react-app.dev/' },
-    { name: 'Debuggage', url: 'https://juba.github.io/tidyverse/20-debuggage-performance.html' },
     { name: 'React Developer Tools', url: 'https://react.dev/learn/react-developer-tools' },
     { name: 'Yarn', url: 'https://yarnpkg.com/' },
     { name: 'Nodejs', url: 'https://nodejs.org/en' },
