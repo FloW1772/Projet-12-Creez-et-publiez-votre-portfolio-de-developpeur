@@ -6,7 +6,7 @@ import CV from '../../assets/document/CV_Florentin_Guine_GENERIQUE.pdf';
 
 const Presentation = () => {
   const [showModale, setShowModale] = useState(false);
-  const cvModalRef = useRef(null); // Référence pour la modale du CV
+  const cvModalRef = useRef(null);
 
   const openCVModale = () => {
     if (cvModalRef.current) {
