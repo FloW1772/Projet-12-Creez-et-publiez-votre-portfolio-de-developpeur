@@ -105,14 +105,14 @@ const ContactPage = () => {
             <div>
               <embed src={CV} type="application/pdf" />
             </div>
-            <button type="button" onClick={closeModale}>Fermer</button>
+            <button className="button2" type="button" onClick={closeModale}>Fermer</button>
           </Modale>
         </div>
 
         <div className='Right'>
           <h1>Contactez-moi :</h1>
           <form onSubmit={handleSubmit}>
-          {messageSent && <p className='sendMessage'>Message envoyé</p>}
+            {messageSent && <p className='sendMessage'>Message envoyé</p>}
 
             <label htmlFor="name">Prénom & Nom :</label>
             <input

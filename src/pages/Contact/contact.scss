@@ -9,7 +9,8 @@
   justify-content: space-between;
 }
 
-.Left, .Right {
+.Left,
+.Right {
   flex-basis: 48%;
 }
 
@@ -50,20 +51,22 @@ button {
   margin-top: 10px;
   font-size: 16px;
   text-decoration: none;
+
+  
 }
+.button2 {
+  display: block;
+  margin: 0 auto;
+}
+
 
 button:hover {
   background-color: #0056b3;
 }
 
-button[type="submit"],
-button[type="button"] {
+button[type="submit"] {
   margin-right: 15%;
   margin-top: 20px;
-}
-
-button[type="button"] {
-  margin-top: 15%;
 }
 
 button[type="button2"] {
@@ -72,26 +75,30 @@ button[type="button2"] {
   margin-top: 2px;
 }
 
+
 #btn-modale-pdf {
   display: block;
+  margin-bottom: 11%;
 }
 
 #btn-open-pdf {
   display: none;
 }
-.sendMessage{
+
+.sendMessage {
   color: greenyellow;
   font-size: 2.2em;
 }
+
 @media (max-width: 768px) {
   .contact-page {
     padding: 30px;
   }
-  
+
   #btn-modale-pdf {
     display: none;
   }
-  
+
   #btn-open-pdf {
     display: block;
   }
@@ -100,7 +107,8 @@ button[type="button2"] {
     flex-direction: column;
   }
 
-  .Left, .Right {
+  .Left,
+  .Right {
     flex-basis: auto;
     margin-right: 0;
   }
