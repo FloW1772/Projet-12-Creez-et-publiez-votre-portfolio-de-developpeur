@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.scss';
-import Logo from '../../assets/logo/Logo-FG.webp'
+import Logo from '../../assets/logo/Logo-FG2.webp'
 
 export default function Header() {
   const redirectToHome = () => {
